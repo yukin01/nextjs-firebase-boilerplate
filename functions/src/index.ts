@@ -1,8 +1,12 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions'
+import next from 'next'
+import * as path from 'path'
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+const dev = process.env.NODE_ENV === 'production'
+const app = next({ dev, conf: { distDir: `${path.relative(process.cwd(), __dirname)}/app` } })
+const handle = app.getRequestHandler()
+
+export const nextApp = functions.https.onRequest((req, res) => {
+  console.log('File: ' + req.originalUrl)
+  return app.prepare().then(() => handle(req, res))
+})
