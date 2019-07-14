@@ -1,9 +1,9 @@
 {
   "name": "functions",
   "scripts": {
-    "dev": "next src/app",
-    "build-app": "next build src/app",
-    "build-functions": "tsc",
+    "dev": "next app",
+    "build-app": "next build app",
+    "build-functions": "tsc --project server",
     "build": "yarn build-functions && yarn build-app",
     "serve": "yarn build && cross-env NODE_ENV=production firebase serve --only functions",
     "deploy": "firebase deploy --only functions",
