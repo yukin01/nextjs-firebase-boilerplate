@@ -1,8 +1,4 @@
 module.exports = {
-  env: {
-    browser: true,
-    node: true
-  },
   extends: [
     // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
     "eslint:recommended",
@@ -10,10 +6,14 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     // https://github.com/prettier/eslint-plugin-prettier
     "plugin:prettier/recommended",
+    // https://github.com/yannickcr/eslint-plugin-react
+    "plugin:react/recommended",
     // https://github.com/prettier/eslint-config-prettier
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
-  plugins: ["node"],  
+  plugins: ["node"],
+  env: { browser: true, node: true },
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
   },

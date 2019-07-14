@@ -1,10 +1,10 @@
 import React from 'react'
 import App from '../components/App'
 
-const Index = () => (
+const About = () => (
   <App>
-    <p>Index Page</p>
+    <p>About Page</p>
   </App>
 )
 
-export default Index
+export default About
