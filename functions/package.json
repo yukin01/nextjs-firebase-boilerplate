@@ -5,10 +5,8 @@
     "build-app": "next build src/app",
     "build-functions": "tsc",
     "build": "yarn build-functions && yarn build-app",
-    "serve": "yarn build && firebase serve --only functions",
-    "shell": "yarn build && firebase functions:shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "serve": "yarn build && cross-env NODE_ENV=production firebase serve --only functions",
+    "deploy": "firebase deploy --only functions"
   },
   "engines": {
     "node": "8"
@@ -25,6 +23,7 @@
     "@types/node": "^12.6.2",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "cross-env": "^5.2.0",
     "typescript": "^3.5.3"
   },
   "private": true
