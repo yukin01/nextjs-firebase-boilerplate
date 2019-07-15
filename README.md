@@ -3,10 +3,9 @@
 ## Features
 
 - Next.js
-  - React.js
-  - TypeScript
-  - ESLint
-  - Prettier
-- Firebase
-  - Hosting
-  - Could Functions
+- React.js
+- TypeScript
+- ESLint
+- Prettier
+- Firebase Hosting
+- Could Functions for Firebase
