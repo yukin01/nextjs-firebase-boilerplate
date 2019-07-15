@@ -5,7 +5,7 @@
     "build-app": "next build app",
     "build-functions": "tsc --project server",
     "build": "yarn build-functions && yarn build-app",
-    "serve": "yarn build && cross-env NODE_ENV=production firebase serve --only functions",
+    "serve": "yarn build && cross-env NODE_ENV=production firebase serve --only functions,hosting",
     "deploy": "firebase deploy --only functions",
     "lint": "eslint '{app,server}/**'"
   },
